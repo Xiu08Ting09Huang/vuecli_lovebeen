@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- 头部 -->
+    
     <router-view/>
     <!-- 底部 -->
   </div>
@@ -8,10 +8,22 @@
 
 <script>
 export default {
-  name: 'App'
-}
+  name: "App"
+};
 </script>
 
 <style>
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
 
+html,body{
+  height: 100%;
+}
+a{
+  color:#666;
+  text-decoration: none;
+}
 </style>
