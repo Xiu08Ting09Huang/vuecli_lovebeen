@@ -1,22 +1,23 @@
 <template>
   <ul class="footer">
       <li>
-          <router-link to="" class="home">
+          <router-link to="/list" class="home">
             <p>首页</p>
           </router-link>
       </li>
       <li>
-          <router-link to="" class="list "  :class="$route.path == '/list' ? className :''">
+          <router-link to="/list" class="list "  :class="$route.path == '/list' ? className :''">
             <p>闪送超市</p>
           </router-link>
       </li>
       <li>
-          <router-link to="" class="cart" :class="$route.path == '/cart' ? className :''">
+          <router-link to="/cart" class="cart" :class="$route.path == '/cart' ? className :''">
             <p>购物车</p>
+            <span class="ball">{{$store.getters.totalCount}}</span>
           </router-link>
       </li>
       <li>
-          <router-link to="" class="member">
+          <router-link to="/list" class="member">
             <p>我的</p>
           </router-link>
       </li>
@@ -35,7 +36,7 @@ export default {
 
 <style>
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   height: 60px;
   width: 100%;
@@ -52,8 +53,8 @@ export default {
     display: block;
     text-align: center;
     font-size: 14px;
-   
     background-size: 25px;
+    position: relative;
 }
 .footer li a.active{
      background-size: 25px;
@@ -88,5 +89,18 @@ export default {
 }
 .footer li p{
     padding-top: 35px;
+}
+.ball{
+    display: inline-block;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #f40;
+    position: absolute;
+    top:0;
+    left: 52%;
+    color: #fff;
+    padding: 0 3px
+
 }
 </style>

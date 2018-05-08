@@ -20,10 +20,17 @@ export default {
 }
 
 html,body{
+    height: 100%;
+    width: 100%;
+
+}
+#app{
   height: 100%;
+    width: 100%;
 }
 a{
   color:#666;
   text-decoration: none;
 }
 </style>
+    box-sizing: border-box

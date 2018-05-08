@@ -65,5 +65,19 @@ module.exports = {
     // `npm run build --report`
     // Set to `true` or `false` to always turn it on or off
     bundleAnalyzerReport: process.env.npm_config_report
-  }
+  },
+  // proxyTable: {
+  //   // 代理规则
+  //   '/api': {
+  //     // 代理的目标服务器地址
+  //     target: 'http://m.beequick.cn/data/',
+  //     // https请求需要该设置
+  //     secure: false,
+  //     // 必须设置该项
+  //     changeOrigin: true,
+  //     // 将 '/api' 替换成 ''
+  //     pathRewrite: { "^/api": "" }
+  //   }
+  // },
+  
 }
