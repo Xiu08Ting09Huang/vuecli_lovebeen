@@ -139,11 +139,13 @@ export default {
           this.list.forEach(v=>{
             allChecked.push(v.active);
           })
-          console.log(allChecked);
+          // console.log(allChecked);
 
           allChecked.forEach(v=>{
-            if(v==true){
-               this.isChoose=true
+            if(v!=true){
+               this.isChoose=false
+            }else{
+              this.isChoose=true
             }
            
           })
@@ -161,9 +163,9 @@ export default {
           this.list.forEach(v=>{
             allChecked.push(v.active);
           })
-          console.log(allChecked);
+          // console.log(allChecked);
           var str=allChecked.join(',')
-          console.log(str)
+          // console.log(str)
           if(str.indexOf('false')!=-1 || str.indexOf('')!=-1){
             this.isChoose = false
           }else{
